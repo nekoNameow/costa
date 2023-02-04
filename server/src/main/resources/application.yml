@@ -1,0 +1,8 @@
+spring:
+  data:
+    mongodb:
+      uri: 'mongodb+srv://sansir:zjzwudi123@cluster0.kybkj2w.mongodb.net/?retryWrites=true&w=majority'
+      database: 'costa'
+
+server:
+  port: 8081
