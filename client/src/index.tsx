@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { RouterProvider } from 'react-router-dom'
-import { VHeader, VSider } from '@/components'
+import { VBreadcrumbs, VHeader, VSider } from '@/components'
 import { store } from './plugins/store'
 import { router } from '@/plugins/router'
 
@@ -20,6 +20,7 @@ async function start () {
         <VSider />
 
         <div className='w-[var(--container-width)] h-[var(--container-height)] overflow-y-auto p-[20px]'>
+          <VBreadcrumbs />
           <RouterProvider router={router} />
         </div>
       </div>

@@ -4,10 +4,11 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.Data;
 
 @Data
 @Document("service")
@@ -23,7 +24,7 @@ public class ServiceEntity implements IEntity {
 
     @Override
     public Map<String, Object> toMap() {
-        Map<String, Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<String, Object>();
         map.put("_id", _id);
         map.put("serviceName", serviceName);
         map.put("vehicleId", vehicleId);

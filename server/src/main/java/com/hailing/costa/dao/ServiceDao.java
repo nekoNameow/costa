@@ -5,11 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.hailing.costa.entity.ServiceEntity;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Component;
+
+import com.hailing.costa.entity.ServiceEntity;
 
 @Component
 public class ServiceDao extends BaseDao<ServiceEntity> {
@@ -30,7 +31,7 @@ public class ServiceDao extends BaseDao<ServiceEntity> {
     list.forEach(item -> {
       String vehicleId = item.getVehicleId();
       if (!map.containsKey(vehicleId)) {
-        map.put(vehicleId, new ArrayList<>());
+        map.put(vehicleId, new ArrayList<ServiceEntity>());
       }
       map.get(vehicleId).add(item);
     });
@@ -44,8 +45,8 @@ public class ServiceDao extends BaseDao<ServiceEntity> {
 
   public List<ServiceEntity> findByNameStatus(String name, String status) {
     Query query = new Query(new Criteria().andOperator(
-            Criteria.where("serviceName").is(name),
-            Criteria.where("status").is(status)));
+        Criteria.where("serviceName").is(name),
+        Criteria.where("status").is(status)));
     return this.find(query);
   }
 
