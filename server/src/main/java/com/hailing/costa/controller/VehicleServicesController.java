@@ -19,30 +19,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class VehicleServicesController {
-    @Autowired
-    private VehicleDao vehicleDao;
-    @Autowired
-    private ServiceDao serviceDao;
+  @Autowired
+  private VehicleDao vehicleDao;
+  @Autowired
+  private ServiceDao serviceDao;
 
-    @ResponseBody
-    @RequestMapping(path = "/vehicle/services", method = RequestMethod.GET)
-    public ResponseEntity<String> main(@RequestParam() String id) {
-        if (id.equals("")) {
-            return ResponseEntity.status(400).body("id missing from request");
-        }
-
-        Map<String, VehicleEntity> vehicleMap = this.vehicleDao.getMap();
-        VehicleEntity vehicle = vehicleMap.get(id);
-        if (vehicle == null) {
-            return ResponseEntity.status(404).body("vehicle id not found");
-        }
-
-        Map<String, List<ServiceEntity>> serviceMap = this.serviceDao.getMap();
-        List<ServiceEntity> list = serviceMap.get(id);
-        if (list == null) {
-            list = new ArrayList<>();
-        }
-
-        return ResponseEntity.status(200).body(new Gson().toJson(list));
+  @ResponseBody
+  @RequestMapping(path = "/vehicle/services", method = RequestMethod.GET)
+  public ResponseEntity<String> main(@RequestParam() String id) {
+    if (id.equals("")) {
+      return ResponseEntity.status(400).body("id missing from request");
     }
+
+    Map<String, VehicleEntity> vehicleMap = this.vehicleDao.getMap();
+    VehicleEntity vehicle = vehicleMap.get(id);
+    if (vehicle == null) {
+      return ResponseEntity.status(404).body("vehicle id not found");
+    }
+
+    Map<String, List<ServiceEntity>> serviceMap = this.serviceDao.getMap();
+    List<ServiceEntity> list = serviceMap.get(id);
+    if (list == null) {
+      list = new ArrayList<>();
+    }
+
+    return ResponseEntity.status(200).body(new Gson().toJson(list));
+  }
 }

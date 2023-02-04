@@ -1,10 +1,15 @@
 import { DirectionsCar, RvHookup } from '@mui/icons-material'
 import { MenuList, MenuItem, ListItemIcon, ListItemText } from '@mui/material'
-import { router } from '@/router'
+import { navigate, RoutePath, router } from '@/plugins/router'
 import { useEffect, useState } from 'react'
 
 function App () {
-  const list = [
+  const list: {
+    icon: any
+    label: string
+    path: RoutePath
+    group: string
+  }[] = [
     {
       icon: DirectionsCar,
       label: 'Vehicles',
@@ -34,7 +39,7 @@ function App () {
         <MenuItem
           className='h-[50px]'
           key={item.label}
-          onClick={() => router.navigate(item.path)}
+          onClick={() => navigate(item.path)}
           selected={current.includes(item.group)}
         >
           <ListItemIcon>

@@ -3,10 +3,12 @@ package com.hailing.costa.entity;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.google.gson.Gson;
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.google.gson.Gson;
+
+import lombok.Data;
 
 @Data
 @Document("vehicle")
@@ -48,6 +50,6 @@ public class VehicleEntity implements IEntity {
     @Override
     public String toString() {
         Gson g = new Gson();
-        return g.toJson(this).toString();
+        return g.toJson(this);
     }
 }

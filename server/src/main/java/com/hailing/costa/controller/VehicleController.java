@@ -19,7 +19,7 @@ public class VehicleController {
 
     @ResponseBody
     @RequestMapping(path = "/vehicle", method = RequestMethod.GET)
-    public ResponseEntity<String> main(@RequestParam(value = "") String id) {
+    public ResponseEntity<String> main(@RequestParam() String id) {
         if (id.equals("")) {
             return ResponseEntity.status(400).body("id missing from request");
         }
