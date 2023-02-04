@@ -97,7 +97,7 @@ public class HttpRequest {
                 is = connection.getInputStream();
                 if (null != is) {
                     br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-                    String temp;
+                    String temp = null;
                     while (null != (temp = br.readLine())) {
                         result.append(temp);
                         result.append("\r\n");

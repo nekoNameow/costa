@@ -14,9 +14,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class ServiceEntity implements IEntity {
     @Id
     private String _id;
-    @Indexed(unique = true)
+    @Indexed
     private String serviceName;
+    @Indexed
     private String status;
+    private String vehicleId;
     private Date lastUpdate;
 
     @Override
@@ -24,6 +26,7 @@ public class ServiceEntity implements IEntity {
         Map<String, Object> map = new HashMap<>();
         map.put("_id", _id);
         map.put("serviceName", serviceName);
+        map.put("vehicleId", vehicleId);
         map.put("status", status);
         map.put("lastUpdate", lastUpdate);
         return map;

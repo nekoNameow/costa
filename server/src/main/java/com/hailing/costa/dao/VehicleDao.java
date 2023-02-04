@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 public class VehicleDao extends BaseDao<VehicleEntity> {
     public VehicleDao() {
         super(VehicleEntity.class);
+        this.TABLE_NAME = "vehicle";
     }
 
     @Cacheable(cacheNames = "vehicleList")
@@ -23,7 +24,9 @@ public class VehicleDao extends BaseDao<VehicleEntity> {
     public Map<String, VehicleEntity> getMap() {
         Map<String, VehicleEntity> map = new HashMap<>();
         List<VehicleEntity> list = this.find();
-        list.forEach(item -> map.put(item.getId(), item));
+        list.forEach(item -> {
+            map.put(item.getId(), item);
+        });
         return map;
     }
 }

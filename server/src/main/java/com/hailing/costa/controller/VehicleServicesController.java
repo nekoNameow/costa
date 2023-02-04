@@ -7,7 +7,6 @@ import java.util.Map;
 import com.google.gson.Gson;
 import com.hailing.costa.dao.ServiceDao;
 import com.hailing.costa.dao.VehicleDao;
-import com.hailing.costa.dao.VehicleServiceDao;
 import com.hailing.costa.entity.ServiceEntity;
 import com.hailing.costa.entity.VehicleEntity;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +23,11 @@ public class VehicleServicesController {
     private VehicleDao vehicleDao;
     @Autowired
     private ServiceDao serviceDao;
-    @Autowired
-    private VehicleServiceDao vehicleServiceDao;
 
     @ResponseBody
     @RequestMapping(path = "/vehicle/services", method = RequestMethod.GET)
     public ResponseEntity<String> main(@RequestParam() String id) {
-        if (id.isBlank()) {
+        if (id.equals("")) {
             return ResponseEntity.status(400).body("id missing from request");
         }
 
@@ -40,17 +37,11 @@ public class VehicleServicesController {
             return ResponseEntity.status(404).body("vehicle id not found");
         }
 
-        Map<String, ServiceEntity> serviceMap = this.serviceDao.getMap();
-        Map<String, List<String>> vehicleServiceMap = this.vehicleServiceDao.getMap();
-        List<String> serviceIds = vehicleServiceMap.get(id);
-        List<ServiceEntity> list = new ArrayList<ServiceEntity>();
-        serviceIds.forEach(x -> {
-            ServiceEntity item = serviceMap.get(x);
-            if (item == null) {
-                return;
-            }
-            list.add(item);
-        });
+        Map<String, List<ServiceEntity>> serviceMap = this.serviceDao.getMap();
+        List<ServiceEntity> list = serviceMap.get(id);
+        if (list == null) {
+            list = new ArrayList<>();
+        }
 
         return ResponseEntity.status(200).body(new Gson().toJson(list));
     }

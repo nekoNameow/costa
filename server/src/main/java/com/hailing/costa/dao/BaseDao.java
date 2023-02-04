@@ -6,6 +6,8 @@ import java.util.Map;
 import com.hailing.costa.entity.IEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
+import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
@@ -14,6 +16,7 @@ public abstract class BaseDao<T extends IEntity> {
     @Autowired
     private MongoTemplate mongoTemplate;
     private Class<T> entity;
+    protected String TABLE_NAME;
 
     public BaseDao(Class<T> entity) {
         this.entity = entity;
@@ -89,5 +92,9 @@ public abstract class BaseDao<T extends IEntity> {
     public void deleteById(String id) {
         Query query = new Query(Criteria.where("_id").is(id));
         this.delete(query);
+    }
+
+    public AggregationResults<T> aggregate(Aggregation aggregate) {
+        return this.mongoTemplate.aggregate(aggregate, this.TABLE_NAME, this.entity);
     }
 }
