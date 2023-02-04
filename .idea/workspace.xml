@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a2265201-ace3-458c-9cf1-1adbb62b93b3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_3_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_6_0_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/craco.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/header/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/sider/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/react-app-env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/router/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/router/service-list/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/router/vehicle-detail/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/router/vehicle-list/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/static/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/controller/VehicleController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/controller/VehicleListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/controller/VehicleServicesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/dao/ServiceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/dao/VehicleServiceDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/ServiceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/VehicleServiceEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/worker/api/ApiVehicleServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/server/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/server/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/CostaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/CostaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/controller/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/dao/BaseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/IEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/IEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/VehicleEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/entity/VehicleEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/utils/HttpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/utils/HttpRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/worker/api/ApiVehicleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/worker/api/ApiVehicleList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/worker/api/RequestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/com/hailing/costa/worker/api/RequestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/test/java/com/hailing/costa/CostaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/test/java/com/hailing/costa/CostaApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2LGp7pFuF4soEe7qyWiY3zr3x4T" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/haizh/sandbox/costa",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="CostaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="costa" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.hailing.costa.CostaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a2265201-ace3-458c-9cf1-1adbb62b93b3" name="Changes" comment="" />
+      <created>1675507108635</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675507108635</updated>
+      <workItem from="1675507109893" duration="1146000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

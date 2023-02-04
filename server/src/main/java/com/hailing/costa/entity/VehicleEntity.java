@@ -6,6 +6,8 @@ import java.util.Map;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.google.gson.Gson;
+
 import lombok.Data;
 
 @Data
@@ -22,6 +24,7 @@ public class VehicleEntity implements IEntity {
     private String chassisNumber;
     private String cassisSeries;
 
+    @Override
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("id", id);
@@ -40,71 +43,13 @@ public class VehicleEntity implements IEntity {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getMsidn() {
-        return msidn;
-    }
-
-    public String getEngineStatus() {
-        return engineStatus;
-    }
-
-    public String getFleet() {
-        return fleet;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getCountryOfOperation() {
-        return countryOfOperation;
-    }
-
-    public String getChassisNumber() {
-        return chassisNumber;
-    }
-
-    public String getCassisSeries() {
-        return cassisSeries;
-    }
-
-    public void setId(String val) {
-        this.id = val;
-    }
-
-    public void setName(String val) {
-        this.name = val;
-    }
-
-    public void setMsidn(String val) {
-        this.msidn = val;
-    }
-
-    public void setEngineStatus(String val) {
-        this.engineStatus = val;
-    }
-
-    public void setFleet(String val) {
-        this.fleet = val;
-    }
-
-    public void setBrand(String val) {
-        this.brand = val;
-    }
-
-    public void setCountryOfOperation(String val) {
-        this.countryOfOperation = val;
-    }
-
-    public void setChassisNumber(String val) {
-        this.chassisNumber = val;
-    }
-
-    public void setCassisSeries(String val) {
-        this.cassisSeries = val;
+    @Override
+    public String toString () {
+        Gson g = new Gson();
+        return g.toJson(this).toString();
     }
 }
