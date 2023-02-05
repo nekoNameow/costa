@@ -16,12 +16,7 @@ The project entry file is located at \src\index.tsx. To start the application pl
 npm start
 ```
 -----------
-If PNPM has not been installed, please run the following command to install it for starting the application at the root directory:
-```bash
-npm install pnpm -g
-pnpm install
-```
------------
+
 ### 🚗 Enjoy ;)
 If everything goes well, this page will show at http://localhost:3000/vehicle/list  
 ![LoginAsTest](https://user-images.githubusercontent.com/124257897/216813506-ab0855be-355c-49f3-821d-aaa16ca5506c.png)
@@ -31,3 +26,11 @@ Please click the login button at the top right coner to view more vehicles!
 ✔️Some performance features:  
 The schedule for fetching data was stated as 1 hour. The cache is used for quicker response.  
 If the page does not reload, the data is read from the status management instead of the HTTP request due to performance considerations. For the same reason, only router providers will update when the page router is changed instead of rendering the whole page.
+
+Tips:  
+MockAPi need configure and use Mockoon. The data can be fetched by injecting the provided VGCS-COSTA-assignment-mock.json data into it.  
+If PNPM has not been installed, please run the following command to install it for starting the application at the root directory:  
+```bash
+npm install pnpm -g
+pnpm install
+```
