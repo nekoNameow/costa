@@ -7,7 +7,7 @@ import { router } from '@/plugins/router'
 import './static/css/index.css'
 
 async function start () {
-  await store.updateVehicleList()
+  await Promise.all([store.updateUser(), store.updateVehicleList()])
 
   const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement

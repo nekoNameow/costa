@@ -1,0 +1,43 @@
+schema {
+  query: Query
+}
+
+type Query {
+  vehicle(id: String): Vehicle
+  vehicleList(name: String, serviceName: String, serviceStatus: String): [Vehicle]
+  vehicleServices(id: String): [Service]
+  serviceList: [Service]
+  checkLogin: User
+  login(username: String, password: String): StrState
+}
+
+type StrState {
+  str: String
+}
+
+type Service {
+  _id: String
+  serviceName: String
+  status: String
+  vehicleId: String
+  lastUpdate: String
+}
+
+type Vehicle {
+  id: String
+  name: String
+  msidn: String
+  engineStatus: String
+  fleet: String
+  brand: String
+  countryOfOperation: String
+  chassisNumber: String
+  cassisSeries: String
+}
+
+type User {
+  _id: String
+  username: String
+  password: String
+  salt: String
+}

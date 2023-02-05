@@ -1,6 +1,5 @@
 package com.hailing.costa.entity;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,25 +9,22 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document("service")
-public class ServiceEntity implements IEntity {
+@Document("user")
+public class UserEntity implements IEntity {
     @Id
     private String _id;
-    @Indexed
-    private String serviceName;
-    @Indexed
-    private String status;
-    private String vehicleId;
-    private Date lastUpdate;
+    @Indexed(unique = true)
+    private String username;
+    private String password;
+    private String salt;
 
     @Override
     public Map<String, Object> toMap() {
         Map<String, Object> map = new HashMap<>();
         map.put("_id", _id);
-        map.put("serviceName", serviceName);
-        map.put("vehicleId", vehicleId);
-        map.put("status", status);
-        map.put("lastUpdate", lastUpdate);
+        map.put("username", username);
+        map.put("password", password);
+        map.put("salt", salt);
         return map;
     }
 

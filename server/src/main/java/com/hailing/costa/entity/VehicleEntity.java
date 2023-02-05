@@ -50,6 +50,6 @@ public class VehicleEntity implements IEntity {
     @Override
     public String toString() {
         Gson g = new Gson();
-        return g.toJson(this);
+        return g.toJson(this).toString();
     }
 }
