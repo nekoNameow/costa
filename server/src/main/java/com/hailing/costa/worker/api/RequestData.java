@@ -101,7 +101,7 @@ public class RequestData {
     String identity = item.getId() + ": " + item.getName();
     String str = client.doGet(BASE_URL + ApiVehicleServices.url + "?id=" + item.getId());
     ApiVehicleServices json = this.gson.fromJson(str, ApiVehicleServices.class);
-    
+
     if (json == null) {
       System.out.println("Get Vehicle Sertices Failed - " + identity);
       return;
