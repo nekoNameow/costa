@@ -21,7 +21,7 @@ public class HttpRequest {
   }
 
   public String doGet(String httpUrl) {
-    HttpURLConnection connection = null;
+    HttpURLConnection connection;
     InputStream is = null;
     BufferedReader br = null;
     StringBuffer result = new StringBuffer();
@@ -36,7 +36,7 @@ public class HttpRequest {
         is = connection.getInputStream();
         if (null != is) {
           br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-          String temp = null;
+          String temp;
           while (null != (temp = br.readLine())) {
             result.append(temp);
           }
@@ -71,7 +71,7 @@ public class HttpRequest {
   }
 
   public String doPost(String httpUrl, String param) {
-    HttpURLConnection connection = null;
+    HttpURLConnection connection;
     OutputStream os = null;
     InputStream is = null;
     BufferedReader br = null;
@@ -97,7 +97,7 @@ public class HttpRequest {
         is = connection.getInputStream();
         if (null != is) {
           br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
-          String temp = null;
+          String temp;
           while (null != (temp = br.readLine())) {
             result.append(temp);
             result.append("\r\n");

@@ -24,7 +24,7 @@ public class ServiceEntity implements IEntity {
 
     @Override
     public Map<String, Object> toMap() {
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         map.put("_id", _id);
         map.put("serviceName", serviceName);
         map.put("vehicleId", vehicleId);

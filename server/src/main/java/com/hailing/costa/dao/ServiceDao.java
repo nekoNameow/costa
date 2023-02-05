@@ -31,7 +31,7 @@ public class ServiceDao extends BaseDao<ServiceEntity> {
     list.forEach(item -> {
       String vehicleId = item.getVehicleId();
       if (!map.containsKey(vehicleId)) {
-        map.put(vehicleId, new ArrayList<ServiceEntity>());
+        map.put(vehicleId, new ArrayList<>());
       }
       map.get(vehicleId).add(item);
     });
